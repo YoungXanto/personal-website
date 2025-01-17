@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--FONTS-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <!--FAVICON-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-xxFpI+gQH5Vz2+rl3V5n3jyE3Pi7F6Fe+OaG+Mk9XxhsIN/gv7hfrqLKiLErX+ld" crossorigin="anonymous">
+
+    <!--SCROLL UP BTN-->
+
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+
+    <link rel="stylesheet" href="SLIDER/css/swiper-bundle.min.css" />
+    
+    <title>Jozef Vážan</title>
+
+</head>
+<body>
+    
+    <header id="home">
+        <nav style="background-color: #191919;">
+            <ul class='nav-bar' data-aos="fade-down">
+                <li class='logo'><a href='index.html'><img src="images/logo.png"/></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="#home" class="slide-away">HOME</a></li>
+                    <li><a href="#about-me">ABOUT ME</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="kontakt.html">CONTACT</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--HOME SECTION-->
+    <section style="background-color: #191919;">
+        <div class="home-section" data-aos="fade">
+            <h1>Jozef Vážan</h1>
+            <p><span class="multi-text"></span></p>
+
+            <div class="language-switcher">
+                <button class="lang-btn" onclick="window.location.href='index.html';">Slovak</button>
+                <button class="lang-btn" onclick="window.location.href='index-en.html';">English</button>
+            </div>
+        </div>
+    </section>
+    
+    <!--ABOUT ME SECTION-->
+    <section>
+        <div class="about-me" id="about-me">
+            <div class="about-me-picture">
+                <img src="images/about-me.jpg" class="about-me-image" data-aos="zoom-in">
+            </div>
+            <div class="about-me-text" data-aos="zoom-in">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I am <span class="underline">Jozef Vážan</span>, a passionate front-end developer with a sense for <span class="underline">creativity and innovation.</span> 
+                    Welcome to my digital corner, where I bring ideas to life through code, design, and artistic expression.
+                </p>
+                <p>
+                    With an eye for detail and a love for clean and functional interfaces, I specialize 
+                    <span class="underline">in creating engaging web experiences</span>, 
+                    that not only captivate users but also provide seamless functionality. 
+                    Whether it's building responsive websites, optimizing user experiences 
+                    or diving deep into the world of UI/UX design, I thrive with the challenges and 
+                    opportunities each project brings.
+                </p>
+                <p>
+                    Outside of coding, I find joy in exploring <span class="underline">graphic design</span>, 
+                    where I can unleash my creativity and bring visual concepts to life. 
+                    My passion also extends to music and video editing, which offers me a creative outlet.
+                </p>
+                <h4>
+                    Let's turn ideas into reality, one line of code at a time!
+                </h4>
+
+                <h2>My Skills</h2>
+                <p>
+                    <span class="underline">Adobe Photoshop, Adobe Priemere Pro, Adobe Illustrator</span>
+                </p>
+                <p>
+                    <span class="underline">HTML, CSS, JavaScript, React(základy), Figma, Firebase</span>
+                </p>
+                <p>
+                    <span class="underline">Microsoft Word, Microsoft Excel, Microsoft Powerpoint</span>
+                </p>
+                <p>
+                    <span class="underline">Mixovanie a Mastrovanie vokálov pre interpretov: Fl Studio 12</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!--PORTFOLIO SECTION-->
+    <img src="images/ooze.png" class="ooze">
+    <section class="portfolio-section" id="portfolio">
+        <h2 data-aos="zoom-in">PORTFOLIO</h2>
+        
+        <!--FILTER MENU-->
+        <ul class="filter-menu" data-aos="zoom-in">
+            <li class="active filter-item">All</li>
+            <li class="filter-item">Websites</li>
+            <li class="filter-item">Graphics</li>
+            <li class="filter-item">Video edits</li>
+        </ul>
+
+        <img src="images/slide-icon.png" alt="" data-aos="zoom-in" class="slide-icon"/>
+
+        <div class="container" data-aos="zoom-in">
+
+            <!--WEBOVÉ STRÁNKY-->
+            <div class="card" data-filter="Websites">
+                <div id="image" class="image">
+                    <img src="images/projects/personal-website.jpg" alt="image of personal website" id="img-src"/>
+                    <i class="fas fa-expand-alt expand-icon"></i>
+                </div>
+                <h2>Personal Website</h2>
+                <p>
+                    Created using HTML, CSS, and JavaScript, it reflects my creativity and 
+                    technical prowess. Through carefully selected content, visitors can get a comprehensive overview 
+                    of who I am both professionally and personally. The website includes sections dedicated to detailed 
+                    information about my background, skills, and experiences, offering a complete look at my abilities. 
+                    Additionally, the portfolio section highlights my projects, demonstrating my expertise in action.
+                </p>
+                <div class="btns">
+                        <a href="index.html" target=”_blank”>Open website</a>
+                        <a href="https://github.com/YoungXanto/personal-website.git" target=”_blank”>Source code</a>
+                </div>
+            </div>
+            
+            <div class="card" data-filter="Websites">
+                <div id="image" class="image">
+                    <img src="images/projects/ordering-app.jpg" alt="" id="img-src" />
+                    <i class="fas fa-expand-alt expand-icon"></i>
+                </div>
+                <h2>Food Ordering App</h2>
+                <p>
+                    Introducing a food ordering app. An innovative solution that brings culinary specialties 
+                    right to your fingertips. This app, built using HTML, CSS, and JavaScript, seamlessly blends functionality 
+                    with a visually appealing interface, offering users a pleasant and convenient way to satisfy their cravings.
+                </p>
+                <div class="btns">
+                    <a href="https://tubular-rabanadas-607093.netlify.app/" target=”_blank”>Open website</a>
+                    <a href="https://github.com/YoungXanto/Ordering-App.git" target=”_blank”>Source code</a>
+                </div>
+            </div>
+            
+            <div class="card" data-filter="Websites">
+                <div id="image" class="image">
+                    <img src="images/projects/shopping-list.jpg" alt="" id="img-src" />
+                    <i class="fas fa-expand-alt expand-icon"></i>
+                </div>
+                <h2>Shopping List</h2>
+                <p>
+                    Presenting a delightful shopping list - a practical tool for managing your shopping items. 
+                    This list, created using HTML, CSS, JavaScript, and Firebase database, allows for real-time storage 
+                    and synchronization of items. Features such as adding, removing, and marking items make the shopping list 
+                    simple and fun.
+                </p>
+                <div class="btns">
+                    <a href="https://vermillion-nasturtium-b0ddaf.netlify.app/" target=”_blank”>Open website</a>
+                    <a href="https://github.com/YoungXanto/shopping-list.git" target=”_blank”>Source code</a>
+                </div>
+            </div>
+
+            <div class="card" data-filter="Websites">
+                <div id="image" class="image">
+                    <img src="images/projects/color-picker.jpg" alt="" id="img-src"/>
+                    <i class="fas fa-expand-alt expand-icon"></i>
+                </div>
+                <h2>Color Picker</h2>
+                <p>
+                    Introducing a color picker website. A dynamic and user-friendly tool designed to simplify 
+                    color selection for any project. This website, built using a combination of HTML, CSS, and JavaScript, 
+                    enables users to effortlessly explore a spectrum of colors and find the perfect shades for their designs.
+                </p>
+                <div class="btns">
+                    <a href="https://effervescent-sunburst-3ae95b.netlify.app/" target=”_blank”>Open website</a>
+                    <a href="https://github.com/YoungXanto/color-scheme-generator.git" target=”_blank”>Source code</a>
+                </div>
+            </div>
+
+            <div class="card" data-filter="Websites">
+                <div id="image" class="image">
+                    <img src="images/projects/unit-convertor.jpg" alt="" id="img-src"/>
+                    <i class="fas fa-expand-alt expand-icon"></i>
+                </div>
+                <h2>Unit Converter</h2>
+                <p>
+                    This unit converter, created using HTML, CSS, and JavaScript, allows conversions between meters, 
+                    feet, gallons, liters, kilograms, and pounds. Users can simply enter a value in one unit and get instant 
+                    results in the desired units. The converter is designed to be clean and intuitive, with a responsive 
+                    layout ensuring comfortable use across devices.
+                </p>
+                <div class="btns">
+                    <a href="https://teal-semifreddo-de80b3.netlify.app/" target=”_blank”>Open website</a>
+                    <a href="https://github.com/YoungXanto/unit-convertor.git" target=”_blank”>Source code</a>
+                </div>
+            </div>
+            
+            <!--GRAFIKA-->
+            <div class="card" data-filter="Graphics">
+                <div id="image" class="image">
+                    <img src="images/projects/grafika-1.jpg" alt="" class="grafika-img" id="img-src" />
+                    <i class="fas fa-expand-alt expand-icon"></i>
+                </div>
+                <h2>Video Editing</h2>
+                <p>
+                    This video editing was done for a tutorial on how to use a website. 
+                    The project involved cutting and styling footage, synchronizing visuals with voiceover.
+                </p>
+                
+                <a href="images/projects/KATALÓG.pdf" target="_blank" class="catalog-btn">Open catalog</a>
+            </div>
+              
+            <div class="card" data-filter="Graphics">
+                <div id="image" class="image">
+                    <img src="images/projects/grafika-2.jpeg" alt="" class="grafika-img" id="img-src"/>
+                    <i class="fas fa-expand-alt expand-icon"></i>
+                </div>
+                <h2>Advertisement for Social Media</h2>
+                <p>
+                    Behold, the embodiment of design perfection! My latest Instagram advertisement, 
+                    precisely created using Photoshop CS6, is proof of our commitment to aesthetic excellence. 
+                    Every pixel, every shade, carefully selected to captivate and inspire. Enter a sphere where 
+                    creativity blends with technology.
+                </p>
+            </div>
+
+            <div class="card" data-filter="Graphics">
+                <div id="image" class="image">
+                    <img src="images/projects/grafika-3.jpg" alt="" class="grafika-img" id="img-src"/>
+                    <i class="fas fa-expand-alt expand-icon"></i>
+                </div>
+                <h2>Deer Antlers</h2>
+                <p>
+                    Unleash the mystical allure of the night with my latest creation! 
+                    Witness the fascinating transformation of an ordinary image into an ethereal 
+                    masterpiece, courtesy of Photoshop CS6. As a witness, ordinary antlers become 
+                    glowing beacons, casting an enchanting glow against the backdrop of darkness.
+                </p>
+                
+                </div>
+
+            <!--Strih Videa-->
+            <div class="card" data-filter="Video edits">
+                <div id="image" class="image no-click">
+                    <a href="https://www.youtube.com/watch?v=q-673SzZzDc&t=1s" target="_blank">
+                    <img src="images/projects/youtube-video2.jpg" alt="" class="grafika-img" id="img-src"/>
+                    </a>
+                </div>
+                <h2>Open Day (Video)</h2>
+                <p>
+                    This video represents a creative project I edited in Adobe Premiere Pro when I was 17 years old. 
+                    The video was created for my high school, where I used my video editing skills 
+                    to create an engaging and visually impressive story. I used a combination of professional techniques and 
+                    a creative approach to enhance the visuals and sound, creating an unforgettable experience for the viewers.
+                </p>                
+            </div>
+
+            <div class="card" data-filter="Video edits">
+                <div id="image" class="image no-click">
+                    <a href="https://youtu.be/4NQKEq-TOhc" target="_blank">
+                    <img src="images/projects/youtube-video.jpg" alt="" class="grafika-img" id="img-src"/>
+                    </a>
+                </div>
+                <h2>Prievidza (Video)</h2>
+                <p>
+                    This video, created by me in Adobe Premiere Pro when I was 17, captures the beauty of my city, Prievidza. 
+                    With a touch of nostalgia, it showcases urban landscapes and local places that evoke memories and emotions. 
+                    I used various editing techniques and visual effects to create an atmosphere that draws the viewers 
+                    into the unique ambiance of my city.
+                </p>
+                
+            </div>
+        </div>
+    
+    </section>
+    
+    <!--FULLSCREEN PHOTOS-->
+    <div id="full-img-view">
+        <img id="FullImage" />
+        <span id="close-full-img">&times;</span>
+    </div>
+
+    <!--SCROLL UP BTN-->
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!--FOOTER-->
+    <footer>
+        <p>Website created and coded by Jozef Vážan</p>
+        <p>© 2025</p>
+    </footer>
+
+    <!--ANIMATIONS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!--TYPING ANIMATION-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!--JAVASCRIPT-->
+    <script src="index.js" type="module"></script>
+</body>
+</html>

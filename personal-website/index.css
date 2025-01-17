@@ -1,0 +1,635 @@
+*, *::before, *::after {
+  box-sizing: border-box; 
+  transition: all .2s linear;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* TYPOGRAPHY */
+
+/* HOME */
+
+.home-section {
+  font-size: 1.75rem; /* 28px */
+  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+               1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+.multi-text {
+  display: inline;
+  font-style: italic;
+}
+
+/* ABOUT ME */
+
+.about-me h4 {
+  font-weight: bold;
+}
+
+.about-me h2 {
+  color: #FF204E;
+  border-bottom: 0.3125rem #FF204E solid; /* 5px */
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.lang-btn {
+  background-color: #333;
+  color: white;
+  border: 2px solid #FF204E;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn:hover {
+  background-color: #333;
+  color: #FF204E;
+}
+
+/* PORTFOLIO */
+
+.card{
+  height: 450px;
+}
+
+.card h2 {
+  margin-top: 1.5625rem; /* 25px */
+  color: #333;
+  font-size: 1.375rem; /* 22px */
+  font-weight: 600;
+}
+
+.card p {
+  margin-top: 0.25rem; /* 4px */
+  font-size: 1.125rem; /* 18px */
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+
+.filter-menu {
+  font-size: 1em; /* 16px */
+}
+
+#close-full-img {
+  font-size: 2rem; /* 32px */
+}
+
+.expand-icon {
+  font-size: 1.25em; /* 20px */
+}
+
+/* CONTACT */
+
+.contact i {
+  font-size: 2rem; /* 32px */
+}
+
+/* HEADER */
+
+.nav-bar {
+  margin: 0;
+  padding: 0.75em 1.25em; /* 12px 20px */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: #191919;
+}
+
+.logo img {
+  width: 2.5rem; /* 40px */
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding-left: 2.5em; /* 40px */
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.0625rem; /* 1px */
+  background-color: #FF204E;
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem; /* 24px */
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 1.25rem; /* 20px */
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 1.25rem; /* 20px */
+  right: 1.25rem; /* 20px */
+}
+
+#check {
+  display: none;
+}
+
+/* HOME SECTION */
+
+.home-section {
+  background-image: url("images/main-cover.jpg");
+  background-size: cover;
+  background-position: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 21.875rem; /* 350px */
+  color: white;
+  line-height: 0;
+}
+
+/* ABOUT ME SECTION */
+
+.about-me {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75em 1.25em;
+  background-color: #191919;
+  color: white;
+}
+
+.about-me-image {
+  width: 50%;
+}
+
+/* PORTFOLIO */
+
+/* FILTER MENU */
+
+.filter-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75em 1.25em;
+  border-bottom: 0.125rem solid #191919; /* 2px */
+}
+
+.filter-menu li {
+  list-style: none;
+  margin: 0 0.3125em; /* 5px */
+  cursor: pointer;
+}
+
+.filter-menu li.active {
+  background-color: #FF204E;
+  color: white;
+  padding: 0 1em; /* 16px */
+}
+
+/* SCROLL BARS */
+
+::-webkit-scrollbar {
+  height: 0.5rem; /* 8px */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1.5625rem; /* 25px */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #191919;
+  border-radius: 1.5625rem; /* 25px */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #FF204E;
+}
+
+/* FULL IMAGE ON CLICK */
+
+#full-img-view {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, .9);
+  z-index: 9999;
+}
+
+#FullImage {
+  padding: 1.5rem; /* 24px */
+  width: 98%;
+  object-fit: cover;
+}
+
+.expand-icon {
+  cursor: pointer;
+}
+
+#close-full-img {
+  position: fixed;
+  top: 0.75rem; /* 12px */
+  right: 0.75rem; /* 12px */
+  color: white;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+
+section {
+  background-image: url(images/red-stars.png);
+  background-size: contain;
+}
+
+.ooze {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  gap: 0.75rem; /* 12px */
+  width: 100%;
+  border-radius: 0.75rem; /* 12px */
+  padding: 0.75em 1.25em; /* 12px 20px */
+  scroll-padding: 1.875rem; /* 30px */
+  box-shadow: 0 0.9375rem 1.5625rem rgba(0, 0, 0, 0.1); /* 15px 25px */
+}
+
+.container .card {
+  width: 100%;
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.875rem; /* 30px */
+  border-radius: 0.75rem; /* 12px */
+  background: #fff;
+  scroll-snap-align: start;
+  box-shadow: 0 0.9375rem 1.5625rem rgba(0, 0, 0, 0.1); /* 15px 25px */
+  height: 100%;
+}
+
+.slide-icon {
+  width: 10%;
+  color: #191919;
+}
+
+.expand-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  color: #191919;
+}
+
+.image {
+  position: relative;
+}
+
+.card .image {
+  padding: 1em; /* 16px */
+  background-color: #FF204E;
+  border-radius: 50%;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+  border: 0.3125rem solid #fff; /* 5px */
+  cursor: pointer;
+}
+
+.card .content {
+  flex-grow: 1;
+}
+
+.card .btns {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns a,
+.catalog-btn {
+  background-color: #191919;
+  color: white;
+  padding: 0 0.3125em; /* 5px */
+  text-decoration: none;
+}
+
+.btns a:hover {
+  background-color: #FF204E;
+}
+
+.catalog-btn:hover {
+  background-color: #FF204E;
+}
+
+/* CONTACT */
+
+.contact {
+  background-image: url("images/red-stars.png");
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+}
+
+.contact ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0.75em 1.25em; /* 12px 20px */
+}
+
+.contact i {
+  cursor: pointer;
+  color: #191919;
+}
+
+.contact i:hover {
+  color: #FF204E;
+}
+
+/* SCROLL UP BTN */
+
+.to-top {
+  z-index: 1;
+  background: white;
+  position: fixed;
+  bottom: 1em; /* 16px */
+  right: 1em; /* 16px */
+  width: 3.125rem; /* 50px */
+  height: 3.125rem; /* 50px */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem; /* 32px */
+  background-color: #191919;
+  color: white;
+  border: 0.1875rem white solid; /* 3px */
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  bottom: 2em; /* 32px */
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 0.75em; /* 12px */
+  margin-top: 1.5em; /* 24px */
+  text-align: center;
+  color: white;
+  background-color: #191919;
+}
+
+/* MEDIA QUERIES */
+
+/* HAMBURGER STACK */
+
+@media (max-width: 610px) {
+  .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: #191919;
+      transition: all 0.2s ease-in-out;
+      font-size: 2rem; /* 32px */
+  }
+
+  .menu li {
+      margin-top: 2.5em; /* 40px */
+  }
+
+  .menu li a {
+      padding: 0.625em; /* 10px */
+  }
+
+  .open-menu,
+  .close-menu {
+      display: block;
+  }
+
+  #check:checked ~ .menu {
+      right: 0;
+  }
+
+  .container {
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+  }
+}
+
+/* MEDIA QUERY FOR DESKTOP */
+
+@media (min-width: 611px) {
+  /* HEADER */
+
+  .nav-bar {
+      padding: 0.75em 4em; /* 12px 64px */
+  }
+
+  /* ABOUT ME */
+
+  .about-me {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2em 4em; /* 32px 64px */
+  }
+
+  .about-me-text {
+      float: right;
+      font-size: 1.25rem; /* 20px */
+  }
+
+  .about-me-image {
+      float: left;
+      width: 70%;
+  }
+
+  /* PORTFOLIO */
+
+section {
+  background-image: url(images/red-stars.png);
+  background-size: contain;
+}
+
+.ooze {
+  width: 100%;
+}
+
+.portfolio-section {
+  padding: 2em 4em; /* 32px 64px */
+}
+
+.projects {
+  column-gap: 3.125em; /* 50px */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  border-radius: 0.75rem; /* 12px */
+  padding: 0.75em 1.25em; /* 12px 20px */
+  scroll-padding: 1.875rem; /* 30px */
+  box-shadow: 0 0.9375rem 1.5625rem rgba(0, 0, 0, 0.1); /* 15px 25px */
+}
+
+.container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.875rem; /* 30px */
+  border-radius: 0.75rem; /* 12px */
+  background: #fff;
+  box-shadow: 0 0.9375rem 1.5625rem rgba(0, 0, 0, 0.1); /* 15px 25px */
+  height: auto;
+}
+
+.card .image {
+  padding: 1em; /* 16px */
+  background-color: #FF204E;
+  border-radius: 50%;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+  border: 0.3125rem solid #fff; /* 5px */
+  cursor: pointer;
+}
+
+.card .content {
+  flex-grow: 1;
+}
+
+.card .btns {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns a,
+.catalog-btn {
+  background-color: #191919;
+  color: white;
+  padding: 0 0.3125em; /* 5px */
+  text-decoration: none;
+}
+
+.btns a:hover {
+  background-color: #FF204E;
+}
+
+.catalog-btn:hover {
+  background-color: #FF204E;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .portfolio-section h2 {
+    font-size: 2rem; /* 32px */
+  }
+
+  .filter-menu {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .slide-icon {
+    display: none;
+  }
+}
+
+  /* CONTACT */
+
+  .contact ul {
+      padding: 2em 4em; /* 32px 64px */
+  }
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 1.25rem; /* 20px */
+}
